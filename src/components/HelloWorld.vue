@@ -2,6 +2,11 @@
   <div class="hello">
     <test></test>
     <h1>{{ msg }}</h1>
+    <div>
+      <swiper ref="banner" :spaceBetween="20" slidesPerView="auto" :autoplay="true">
+        <div v-for="item of 5" :key="item" :name="item">{{ item }}</div>
+      </swiper>
+    </div>
     <p>
       For a guide and recipes on how to configure / customize this project,
       <br />check out the

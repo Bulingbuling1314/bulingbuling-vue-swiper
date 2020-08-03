@@ -1,7 +1,9 @@
 import Test from '../packages/test';
+import Swiper from '../packages/swiper';
 
 const components = [
-  Test
+  Test,
+  Swiper
 ]
 
 const install = (Vue, opts = {}) => {
@@ -16,9 +18,10 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export {
   install,
-  Test
+  Test,
+  Swiper
 }
 export default {
   install,
-  Test
+  ...components
 }
