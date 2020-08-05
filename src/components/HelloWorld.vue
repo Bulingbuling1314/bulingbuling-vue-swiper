@@ -1,12 +1,21 @@
 <template>
   <div class="hello">
-    <test></test>
+    <swiper
+      ref="banner"
+      :slidesPerView="1.5"
+      :spaceBetween="10"
+      :centeredSlides="true"
+      :autoplay="true"
+    >
+      <div
+        :class="`swiper-item swiper-item${item}`"
+        v-for="item of 5"
+        :key="item"
+        :name="item"
+      >{{ item }}</div>
+    </swiper>
+    <test>123</test>
     <h1>{{ msg }}</h1>
-    <div>
-      <swiper ref="banner" :spaceBetween="20" slidesPerView="auto" :autoplay="true">
-        <div v-for="item of 5" :key="item" :name="item">{{ item }}</div>
-      </swiper>
-    </div>
     <p>
       For a guide and recipes on how to configure / customize this project,
       <br />check out the
@@ -71,19 +80,32 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style scoped lang="sass">
+.swiper-item
+  width: 100%
+  height: 300px
+.swiper-item1
+  background-color: skyblue
+.swiper-item2
+  background-color: pink
+.swiper-item3
+  background-color: blue
+.swiper-item4
+  background-color: green
+.swiper-item5
+  background-color: hotpink
+
+h3
+  margin: 40px 0 0
+
+ul
+  list-style-type: none
+  padding: 0
+
+li
+  display: inline-block
+  margin: 0 10px
+
+a
+  color: #42b983
 </style>

@@ -1,14 +1,13 @@
 <template>
   <div style="backgroundColor: red">
-    <solt>滴滴滴～</solt>
+    <slot>滴滴滴～</slot>
   </div>
 </template>
 <script>
 export default {
   name: "Test",
   data () {
-    return {
-    };
+    return {}
   },
   prop: {}
 }

@@ -16,8 +16,13 @@ import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 
 export default {
-  name: 'swiper',
+  name: 'Swiper',
   props: {
+    // 切换样式
+    effect: {
+      type: String,
+      default: 'slide'
+    },
     // 显示分页器
     showPagination: {
       type: Boolean,
@@ -81,8 +86,10 @@ export default {
         slidesPerView: this.slidesPerView,
         spaceBetween: this.spaceBetween,
         loop: this.loop,
+        effect: this.effect,
         centeredSlides: this.centeredSlides,
         pagination: {}
+
       }
       // 自动播放
       if (this.autoplay) {
@@ -108,43 +115,32 @@ export default {
       }
     },
     update () {
-      // 更新swiper
-      // 这个方法就是create的别名
       this.create()
-
-      // swiper的文档说update方法用于更新swiper
-      // 但试了下更新slide后再调用update方法,并没有什么效果
-      // 只好先销毁swiper,然后重新创建
-
-      //   if (this.swiper) {
-      //     this.swiper.update()
-      //   }
     }
   }
 }
 </script>
 
 <style scoped>
-.swiper {
-  width: 100%;
-  position: relative;
-}
-.swiper-pagination {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* 分页器标签由swiper生成, 因此vue不会添加scoped的样式 */
-/* https://segmentfault.com/q/1010000010981722 */
-/* .swiper-pagination-bullet {
+  .swiper {
+    width: 100%;
+    position: relative;
+  }
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .swiper-pagination-bullet {
     margin: 0 4px;
-} */
-</style>
-
-<style>
-.swiper-pagination-bullet {
-  margin: 0 4px;
-}
+  }
+  .swiper-slide {
+    transform: scale(0.8);
+    transition: all 0.3s;
+  }
+  .swiper-slide-active {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+  }
 </style>
