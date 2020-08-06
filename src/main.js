@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { Test, Swiper } from '../packages'
-Vue.use(Test).use(Swiper)
+import Swiper from '../packages'
+Vue.use(Swiper)
 Vue.config.productionTip = false
 
 new Vue({

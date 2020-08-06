@@ -1,7 +1,7 @@
 <template>
   <div class="swiper">
     <div class="swiper-container" ref="container">
-      <div class="swiper-wrapper" ref="wrapper">
+      <div :class="[{'swiper-stack': stack}, 'swiper-wrapper']" ref="wrapper">
         <!-- 通过slot传入内容 -->
         <slot></slot>
       </div>
@@ -23,6 +23,11 @@ export default {
       type: String,
       default: 'slide'
     },
+    // 层叠轮播
+    stack: {
+      type: Boolean,
+      default: false
+    },
     // 显示分页器
     showPagination: {
       type: Boolean,
@@ -32,7 +37,7 @@ export default {
     // 可选值: 数字 或 'auto'
     slidesPerView: {
       type: [Number, String],
-      default: 1
+      default: 0
     },
     // slide间隔
     spaceBetween: {
@@ -83,13 +88,15 @@ export default {
       })
       // swiper参数
       const param = {
-        slidesPerView: this.slidesPerView,
         spaceBetween: this.spaceBetween,
         loop: this.loop,
         effect: this.effect,
         centeredSlides: this.centeredSlides,
         pagination: {}
-
+      }
+      // 层叠
+      if (this.stack) {
+        param.slidesPerView = this.slidesPerView || 1.5
       }
       // 自动播放
       if (this.autoplay) {
@@ -121,26 +128,23 @@ export default {
 }
 </script>
 
-<style scoped>
-  .swiper {
-    width: 100%;
-    position: relative;
-  }
-  .swiper-pagination {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .swiper-pagination-bullet {
-    margin: 0 4px;
-  }
-  .swiper-slide {
-    transform: scale(0.8);
-    transition: all 0.3s;
-  }
-  .swiper-slide-active {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-    transform: scale(1);
-  }
+<style lang="sass" scoped>
+.swiper
+  width: 100%
+  position: relative
+  .swiper-pagination
+    position: absolute
+    bottom: 10%
+    left: 50%
+    transform: translateX(-50%)
+  .swiper-pagination-bullet
+    margin: 0 4px
+
+  .swiper-stack
+    .swiper-slide
+      transform: scale(0.8)
+      transition: all 0.3s
+    .swiper-slide-active
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3)
+      transform: scale(1)
 </style>

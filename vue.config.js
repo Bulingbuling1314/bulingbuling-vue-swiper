@@ -1,12 +1,18 @@
-var path = require('path')
-var webpack = require('webpack')
-
+const path = require('path')
+// const webpack = require('webpack')
 module.exports = {
-  pages: {
-    index: {
-      entry: 'src/main.js',
-      template: 'public/index.html',
-      filename: 'index.html'
+  publicPath: '/dist/',
+  css: {
+    extract: false
+  },
+  productionSourceMap: false,
+  outputDir: path.resolve(__dirname, './dist'),
+  configureWebpack: {
+    output: {
+      filename: 'bulingbuling-vue-swiper.min.js',
+      library: 'bulingbuling-vue-swiper',
+      libraryTarget: 'umd',
+      umdNamedDefine: true
     }
   }
 }
