@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <swiper>
+    <b-swiper>
       <div>1</div>
       <div>1</div>
       <div>1</div>
       <div>1</div>
-    </swiper>
+    </b-swiper>
   </div>
 </template>
 

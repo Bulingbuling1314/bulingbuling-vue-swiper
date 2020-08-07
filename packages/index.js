@@ -1,7 +1,7 @@
-import Swiper from '../packages/swiper';
+import BSwiper from '../packages/swiper';
 
 const components = [
-  Swiper
+  BSwiper
 ]
 
 const install = (Vue, opts = {}) => {
@@ -16,5 +16,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   install,
-  Swiper
+  BSwiper
 }

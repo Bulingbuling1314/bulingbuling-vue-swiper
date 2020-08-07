@@ -16,7 +16,7 @@ import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 
 export default {
-  name: 'Swiper',
+  name: 'BSwiper',
   props: {
     // 切换样式
     effect: {
