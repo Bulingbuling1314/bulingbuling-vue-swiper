@@ -17,14 +17,12 @@ Vue.use(BSwiper)
 </b-swiper>
 ```
 4. 其他属性
-| 属性名 | 功能 | 值 |
-| --- | --- | --- |
-| effect | 轮播效果 | 'slide','cube','coverflow','flip' |
-| stack | 开启层叠效果 | true\|\false, 默认false |
-| showPagination | 显示分页器 | true\|\false, 默认false |
-| spaceBetween | slide间隔 | Number\|\String |
-| loop | 循环播放 | true\|\false, 默认true |
-| centeredSlides | 自动居中 | true\|\false, 默认true |
-| autoplay | 自动播放 | true\|\false, 默认true |
-| delay | 时间间隔 | Number, 默认3000 |
-| disableOnInteraction | 用户操作后, 是否禁止自动播放 | true\|\false, 默认true |
+- | effect | 轮播效果 | 'slide','cube','coverflow','flip' |
+- | stack | 开启层叠效果 | true\|\false, 默认false |
+- | showPagination | 显示分页器 | true\|\false, 默认false |
+- | spaceBetween | slide间隔 | Number\|\String |
+- | loop | 循环播放 | true\|\false, 默认true |
+- | centeredSlides | 自动居中 | true\|\false, 默认true |
+- | autoplay | 自动播放 | true\|\false, 默认true |
+- | delay | 时间间隔 | Number, 默认3000 |
+- | disableOnInteraction | 用户操作后, 是否禁止自动播放 | true\|\false, 默认true |
