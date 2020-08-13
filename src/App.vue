@@ -1,10 +1,18 @@
 <template>
   <div id="app">
-    <b-swiper>
-      <div>1</div>
-      <div>1</div>
-      <div>1</div>
-      <div>1</div>
+    <b-swiper effect="fade">
+      <div class="swiper-item">
+        <img src="../public/1.png" alt />
+      </div>
+      <div class="swiper-item">
+        <img src="../public/2.png" alt />
+      </div>
+      <div class="swiper-item">
+        <img src="../public/3.png" alt />
+      </div>
+      <div class="swiper-item">
+        <img src="../public/4.png" alt />
+      </div>
     </b-swiper>
   </div>
 </template>
@@ -25,4 +33,8 @@ export default {
   text-align: center
   color: #2c3e50
   margin-top: 60px
+  .swiper-item
+    width: 100%
+    img
+      width: 100%
 </style>

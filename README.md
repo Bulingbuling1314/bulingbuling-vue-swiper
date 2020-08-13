@@ -1,19 +1,8 @@
 # bulingbuling-ui
-
-## Project setup
+1.安装
+`npm install bulingbuling-vue-swiper -S`
+2.使用
+``` main.js
+import BSwiper from '../packages'
+Vue.use(BSwiper)
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
