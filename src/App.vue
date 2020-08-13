@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <b-swiper effect="fade">
-      <div class="swiper-item">
+    <b-swiper>
+      <!-- <div class="swiper-item">
         <img src="../public/1.png" alt />
       </div>
       <div class="swiper-item">
@@ -12,7 +12,11 @@
       </div>
       <div class="swiper-item">
         <img src="../public/4.png" alt />
-      </div>
+      </div>-->
+      <div>slide1</div>
+      <div>slide2</div>
+      <div>slide3</div>
+      <div>slide4</div>
     </b-swiper>
   </div>
 </template>
