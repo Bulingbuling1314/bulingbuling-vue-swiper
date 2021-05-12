@@ -16,7 +16,7 @@
     "url": "https://github.com/Bulingbuling1314/bulingbuling-vue-swiper.git"
   },
   "dependencies": {
-    "swiper": "^4.5.0",
+    "swiper": "^6.5.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
